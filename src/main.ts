@@ -7,7 +7,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.use(cookieParser());
   app.setGlobalPrefix('api');
-  app.enableCors({ origin: '*', credentials: true });
+  app.enableCors({ origin: 'http://127.0.0.1:5500', credentials: true });
 
   // swagger
   const options = new DocumentBuilder()
